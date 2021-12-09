@@ -20,7 +20,7 @@ $(function () {
 });
 $(function () {
     $(".typed").typed({
-        strings: ["Scam", "hacker", "C++", "bruh", "Дикий дрочер"],
+        strings: ["Scam", "hacker", "C++/python", "bruh", "not scam)", "Сделаю вам сайт или бота тг!", "fan site"],
         typeSpeed: 50,
         loop: true,
         cursorChar: "|",
