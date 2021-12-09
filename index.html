@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>mayak</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="header">
+   <div align="center" class="block">
+        <video class="avatar" src="avatar.mp4" autoplay muted loop></video>
+        <div align="center">
+            <h1><b>Слава Маяку!</b></h1>
+            <h3>Quest lover</h3>
+        </div>
+
+        <div align="center">
+            <h2>
+                <b>
+                    <p href="" class="typewrite" data-period="2000" data-type='[ "кто хрюкнет тому пизды выдам", "ты клякса", "Russian Czech NeNegr", "я тебя съем :3" ]'>
+                        <span class="wrap"></span>
+                    </p>
+                </b>
+            </h2>
+        </div>
+
+        <script type="text/javascript">
+            var TxtType = function(el, toRotate, period) {
+                    this.toRotate = toRotate;
+                    this.el = el;
+                    this.loopNum = 0;
+                    this.period = parseInt(period, 10) || 2000;
+                    this.txt = '';
+                    this.tick();
+                    this.isDeleting = false;
+                };
+
+                TxtType.prototype.tick = function() {
+                    var i = this.loopNum % this.toRotate.length;
+                    var fullTxt = this.toRotate[i];
+
+                    if (this.isDeleting) {
+                    this.txt = fullTxt.substring(0, this.txt.length - 1);
+                    } else {
+                    this.txt = fullTxt.substring(0, this.txt.length + 1);
+                    }
+
+                    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+                    var that = this;
+                    var delta = 200 - Math.random() * 100;
+
+                    if (this.isDeleting) { delta /= 2; }
+
+                    if (!this.isDeleting && this.txt === fullTxt) {
+                    delta = this.period;
+                    this.isDeleting = true;
+                    } else if (this.isDeleting && this.txt === '') {
+                    this.isDeleting = false;
+                    this.loopNum++;
+                    delta = 500;
+                    }
+
+                    setTimeout(function() {
+                    that.tick();
+                    }, delta);
+                };
+
+                window.onload = function() {
+                    var elements = document.getElementsByClassName('typewrite');
+                    for (var i=0; i<elements.length; i++) {
+                        var toRotate = elements[i].getAttribute('data-type');
+                        var period = elements[i].getAttribute('data-period');
+                        if (toRotate) {
+                          new TxtType(elements[i], JSON.parse(toRotate), period);
+                        }
+                    }
+                };
+        </script>
+
+        <div class="social telegram">
+            <a href="https://t.me/yadamtebepenis"><i class="fa fa-telegram"></i></a>
+        </div>
+        <div class="social github">
+            <a href="https://github.com/pokerspirit"><i class="fa fa-github"></i></a>
+        </div>
+    </div>
+    <div class="inner-header flex">
+        </style>
+        <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">
+            <path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
+        </svg>
+     </div>
+    
+    <!--Waves Container-->
+    <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+        </svg>
+
+    </div>
+    <!--Waves end-->
+
+</div>
+
+<!-- partial -->
+<script type="text/javascript">
+    (function(){
+            function getDeviceWidth()
+              {
+                var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;
+                if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio)
+                  deviceWidth = deviceWidth / window.devicePixelRatio;
+     
+                return deviceWidth;
+              }
+            function getDeviceHeight()
+              {
+                var deviceHeight = window.orientation == 90 ? window.screen.height : window.screen.width;
+                if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio)
+                  deviceHeight = deviceHeight / window.devicePixelRatio;
+     
+                return deviceHeight;
+              }
+            
+     
+              var deviceWidth = getDeviceWidth();
+              var deviceHeight = getDeviceHeight();
+              
+              var minWidth = 180;
+                          
+                if (window.orientation == 0 || window.orientation == 180)
+                 {
+                   if (window.innerHeight<minWidth) {
+                   var scal=window.innerHeight/minWidth;}else{
+                     var scal=1.0;
+                   };
+                  document.write('<meta name="viewport" content="width=' + minWidth + ',initial-scale ='+ scal +'" >');
+                 } else  
+                 {
+                   var scal=window.innerWidth/minWidth;
+                   document.write('<meta name="viewport" content="width=' + minWidth + ',initial-scale ='+ scal +'" >');
+                 };
+            }());
+</script>
+</body>
+</html>
