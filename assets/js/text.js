@@ -20,8 +20,8 @@ $(function () {
 });
 $(function () {
     $(".typed").typed({
-        strings: ["hacker", "C++/python", "bruh", "not scam)", "Сделаю вам сайт или бота тг!", "fan site"],
-        typeSpeed: 50,
+        strings: ["Gkpole", "C++/python", "Bebra", "fun site"],
+        typeSpeed: 150,
         loop: true,
         cursorChar: "|",
     });
